@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-slurp"
+version = "0.1.0"
+authors = [
+    { name = "Dan", email = "daniel.picton@gmail.com" }
+]
+description = "A command-line tool to extract text and images from PDF files"
+readme = "README.md"
+license = { file="LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyPDF2",
+    "Pillow", # or "PIL" if you're using that version
+    # any other dependencies your script has
+]
+
+[project.scripts]
+pdf-slurp = "pdf_slurp:main"
